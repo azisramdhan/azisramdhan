@@ -1,6 +1,6 @@
-### Hi there 👋
 
 <!--
+### Hi there 👋
 **azisramdhan/azisramdhan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -15,5 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-// README.md
 ![Github stats](https://github-readme-stats.vercel.app/api?username=azisramdhan&theme=default&show_icons=true&count_private=true)
