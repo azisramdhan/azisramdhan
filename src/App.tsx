@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Linkedin, Mail, ChevronDown, Smartphone, Code, Rocket, MessageSquare, GitBranch, Box, RefreshCw } from 'lucide-react';
 
 function App() {
@@ -8,20 +7,20 @@ function App() {
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-6 text-center">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200" 
+            src="/images/memoji-new.png" 
             alt="Profile" 
             className="w-32 h-32 rounded-full mx-auto mb-8 object-cover shadow-lg"
           />
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">John Doe</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Azis R</h1>
           <p className="text-xl text-gray-600 mb-8">iOS Developer</p>
           <div className="flex justify-center gap-4 mb-12">
-            <a href="#" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+            <a href="https://github.com/azisramdhan" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+            <a href="https://www.linkedin.com/in/azisramdhandarojat" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+            <a href="mailto:azisramdhan@icloud.com" className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>
@@ -200,14 +199,20 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>© 2024 John Doe. All rights reserved.</p>
+          <p>© 2025 Azis R. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
 }
 
-function ServiceCard({ icon, title, description }) {
+interface ServiceCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
@@ -219,7 +224,14 @@ function ServiceCard({ icon, title, description }) {
   );
 }
 
-function WorkflowCard({ icon, title, description, details }) {
+interface WorkflowCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  details: string[];
+}
+
+function WorkflowCard({ icon, title, description, details }: WorkflowCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
@@ -228,7 +240,7 @@ function WorkflowCard({ icon, title, description, details }) {
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
-        {details.map((detail, index) => (
+        {details.map((detail: string, index: number) => (
           <li key={index} className="flex items-center text-sm text-gray-600">
             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
             {detail}
@@ -239,7 +251,13 @@ function WorkflowCard({ icon, title, description, details }) {
   );
 }
 
-function PipelineStep({ number, title, description }) {
+interface PipelineStepProps {
+  number: string;
+  title: string;
+  description: string;
+}
+
+function PipelineStep({ number, title, description }: PipelineStepProps) {
   return (
     <div className="flex items-start">
       <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">
@@ -253,7 +271,14 @@ function PipelineStep({ number, title, description }) {
   );
 }
 
-function PortfolioCard({ image, title, description, tags }) {
+interface PortfolioCardProps {
+  image: string;
+  title: string;
+  description: string;
+  tags: string[];
+}
+
+function PortfolioCard({ image, title, description, tags }: PortfolioCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
