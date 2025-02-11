@@ -7,7 +7,7 @@ function App() {
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-6 text-center">
           <img 
-            src="/images/memoji-new.png" 
+            src="./images/memoji-new.png" 
             alt="Profile" 
             className="w-32 h-32 rounded-full mx-auto mb-8 object-cover shadow-lg"
           />
